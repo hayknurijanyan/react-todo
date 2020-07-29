@@ -4,19 +4,25 @@
     align-items: center;
 }
 
-.h1{
-    color: blueviolet;
+h2{
+    display: flex;
+    color: black;
+    justify-content: center;
+}
+.mainInput{
+    flex-direction: column;
 }
 
 ul{
     display: flex;
     flex-direction: row;
     text-align: left;
+    margin-right: 20px;
 }
 .list{
    background-color: whitesmoke;
    list-style: none;
-   margin: 0px;
+   margin: 2px;
    border:1px solid grey ;
    border-radius: 3px;
 }

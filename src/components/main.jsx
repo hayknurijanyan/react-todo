@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "../Main.css";
 import Input from "./input";
 import Todos from "./todos";
+import { Grid } from '@material-ui/core'
+
 
 class Main extends Component {
   state = {
@@ -17,6 +19,14 @@ class Main extends Component {
     this.setState({ value });
   };
 
+  handleEnter = (e) => {
+    console.log('hello')
+    if (e.keyCode === 13) {
+      console.log('do validate')
+    }
+
+  }
+
   addTask = () => {
     const newTask = this.state.value;
     let newId = 0;
@@ -29,16 +39,19 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="container">
+      <>
         <h2>To Do List</h2>
+
         <Input
           value={this.state.value}
           onChange={this.handleChange}
-          addTask={this.addTask} />
+          addTask={this.addTask}
+          keyDown={this.handleEnter} />
+
         {this.state.todos.map((el) => (
           <Todos key={el.id} value={el.content} />
         ))}
-      </div>
+      </>
     );
   }
 }

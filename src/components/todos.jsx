@@ -6,9 +6,12 @@ class Todos extends Component {
   render() { 
     return ( 
       <div className="column">
-      <Task 
+      <Task
+      onDelete={this.props.onDelete}
+      changeStatus={this.props.changeStatus}
       name={this.props.value}
-      id={this.props.id}/>
+      id={this.props.id}
+      checkStatus={this.props.checkStatus}/>
       </div>
      );
   }

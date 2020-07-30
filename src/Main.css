@@ -1,12 +1,19 @@
 .container{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    margin:auto;
+    max-width: 75%;
+    margin-top: 20px;
+}
+
+.column{
+    margin-top: 0px;
 }
 
 h2{
     display: flex;
-    color: black;
+    color: rgb(34, 108, 194);
     justify-content: center;
 }
 .mainInput{
@@ -18,11 +25,21 @@ ul{
     flex-direction: row;
     text-align: left;
     margin-right: 20px;
+    margin-top: 0px;
 }
+.completed{
+    background-color: #0dbab1;
+    color:white;
+    margin: 2px;
+    border:1px solid grey ;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
 .list{
-   background-color: whitesmoke;
-   list-style: none;
-   margin: 2px;
-   border:1px solid grey ;
-   border-radius: 3px;
+    background-color: whitesmoke;
+    margin: 2px;
+    border:1px solid grey ;
+    border-radius: 3px;
+    overflow: hidden;
 }
